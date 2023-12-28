@@ -19,14 +19,19 @@
             <form id="filterContainer">
                 <input type="text" name="search" id="search" oninput="filterMovies()" placeholder="Enter movie title">
                 <input type="text" id="director" oninput="filterMovies()" placeholder="Enter director">
-
                 <input type="text" id="duration" oninput="filterMovies()" placeholder="Enter duration">
-
                 <input type="text" id="genre" oninput="filterMovies()" placeholder="Enter genre">
-
                 <input type="text" id="year" oninput="filterMovies()" placeholder="Enter year">
-
                 <input type="text" id="rating" oninput="filterMovies()" placeholder="Enter rating">
+            </form>
+            <form id="sortButtons">
+                <label for="sort">Sort Results:</label>
+                <div class="sortButtonsFrame">
+                    <input type="submit" id="sort" value="Rating">
+                    <input type="submit" id="sort" value="Name">
+                    <input type="submit" id="sort" value="Year">
+                    <input type="submit" id="sort" value="Director">
+                </div>
             </form>
         </section>
         <section class="movieDbOutput"></section>
