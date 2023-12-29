@@ -19,6 +19,7 @@
             <form id="filterFunktion">
                 <label for="search">Search:</label>
                 <input type="text" name="search" id="search" oninput="filterMovies()" placeholder="Enter movie title">
+                <label class="filterLabel" for="director">Filter:</label>
                 <input type="text" id="director" oninput="filterMovies()" placeholder="Enter director">
                 <input type="text" id="duration" oninput="filterMovies()" placeholder="Enter duration">
                 <input type="text" id="genre" oninput="filterMovies()" placeholder="Enter genre">
@@ -26,7 +27,7 @@
                 <input type="text" id="rating" oninput="filterMovies()" placeholder="Enter rating">
             </form>
             <form id="sortierFunktion">
-                <label for="sort">Sort Results:</label>
+                <label for="sort">Sorting:</label>
                 <div class="sortButtonsFrame">
                     <input onclick="sortMovies('rating')" type="button" id="sort" value="Rating">
                     <input onclick="sortMovies('name')" type="button" id="sort" value="Name">

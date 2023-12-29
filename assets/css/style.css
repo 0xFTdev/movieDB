@@ -155,10 +155,11 @@ input[type="button"] {
   color: rgb(20, 20, 20);
   border-radius: 0.3rem;
   border-style: none;
-  padding: 0.2rem;
+  padding: 0.4rem;
   text-align: center;
-  font-size: 0.6rem;
+  font-size: 1rem;
   font-family: "InterTight";
+  font-weight: 200;
   cursor: pointer;
 }
 
@@ -176,6 +177,8 @@ input[type="button"] {
   text-align: center;
   width: 100%;
   font-size: 1rem;
+  font-family: "InterTight";
+  font-weight: 200;
   color: rgb(36, 36, 36);
   font-family: "InterTight";
   cursor: pointer;
@@ -191,14 +194,14 @@ input[type="button"] {
 #sortierFunktion label {
   font-family: "Walt";
   letter-spacing: 0.1rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   border-bottom: 1px beige solid;
 }
 
 #contributeLabel {
   font-family: "Walt";
   letter-spacing: 0.1rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   border-bottom: 1px beige solid;
 }
 
@@ -213,6 +216,11 @@ input[type="button"] {
   font-size: 0.9rem;
   justify-items: center;
   gap: 1rem;
+}
+
+.sortButtonsFrame {
+  display: flex;
+  gap: 0.5rem;
 }
 
 /* Footer */
