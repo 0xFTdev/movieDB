@@ -22,9 +22,12 @@
                 <label class="filterLabel" for="director">Filter:</label>
                 <input type="text" id="director" oninput="filterMovies()" placeholder="Enter director">
                 <input type="text" id="duration" oninput="filterMovies()" placeholder="Enter duration">
-                <input type="text" id="genre" oninput="filterMovies()" placeholder="Enter genre">
                 <input type="text" id="year" oninput="filterMovies()" placeholder="Enter year">
                 <input type="text" id="rating" oninput="filterMovies()" placeholder="Enter rating">
+                <label class="filterLabel" for="genre">Genres:</label>
+                <select id="genre" onchange="filterMovies()">
+                    <option value="">All Genres</option>
+                </select>
             </form>
             <form id="sortierFunktion">
                 <label for="sort">Sorting:</label>
