@@ -367,28 +367,57 @@ footer {
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
-  padding-top: 60px;
+  padding-top: 2rem;
 }
 
 #modalContent {
-  background-color: #fefefe;
+  background-color: rgba(0, 0, 0, 0.9);
   margin: 5% auto;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  border-radius: 8px;
+  width: 20%;
+  border: 1px white solid;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: "InterTight";
+  font-size: 1rem;
+  color: beige;
+}
+
+#modalContent button {
+  background-color: beige;
+  border-radius: 0.3rem;
+  border-style: none;
+  padding: 0.3rem;
+  text-align: center;
+  width: 100%;
+  font-size: 1rem;
+  font-family: "InterTight";
+  font-weight: 200;
+  color: rgb(36, 36, 36);
+  font-family: "InterTight";
+  cursor: pointer;
+}
+
+#modalContent button:hover {
+  background-color: rgb(195, 161, 161);
+}
+
+#modalContent ::placeholder {
+  font-family: "InterTight";
 }
 
 #closeModal {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+  color: beige;
+  font-size: 2rem;
+  display: flex;
+  justify-content: flex-end;
 }
 
 #closeModal:hover,
 #closeModal:focus {
-  color: black;
+  color: rgb(195, 161, 161);
   text-decoration: none;
   cursor: pointer;
 }
