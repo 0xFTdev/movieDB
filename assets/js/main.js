@@ -1086,7 +1086,7 @@ function updateSortButton(criteria, buttonId) {
     button.value =
       criteria.charAt(0).toUpperCase() + criteria.slice(1) + " " + arrow;
   } else {
-    console.error(`Button with ID '${buttonId}' not found.`);
+    return;
   }
 }
 
