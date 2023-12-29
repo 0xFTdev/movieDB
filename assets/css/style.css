@@ -1,3 +1,25 @@
+/* Smooth Scrolling */
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 /* Global Styles */
 
 * {
@@ -12,6 +34,7 @@ body {
   justify-content: space-between;
   min-height: 100lvh;
   width: 100%;
+  scroll-behavior: smooth;
 }
 
 /* Font Imports */
@@ -33,7 +56,7 @@ body {
 
 /* Typography */
 
-.headLine {
+.headLine a {
   font-family: "Showtime";
   color: beige;
   font-size: 3rem;
@@ -252,6 +275,12 @@ footer {
 }
 
 .logoFooter {
+  color: beige;
+  font-family: "Showtime";
+  z-index: 1;
+}
+
+.logoFooter a {
   color: beige;
   font-family: "Showtime";
   z-index: 1;
