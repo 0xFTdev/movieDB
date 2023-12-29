@@ -12,7 +12,6 @@ body {
   justify-content: space-between;
   min-height: 100lvh;
   width: 100%;
-  overflow: hidden;
 }
 
 /* Font Imports */
@@ -41,12 +40,24 @@ body {
   z-index: 1;
 }
 
+span {
+  font-family: "InterTight";
+  font-weight: 600;
+}
+
 .subTitle {
   font-family: "Walt";
   color: beige;
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
   z-index: 1;
+}
+
+.cardContentHeadline {
+  margin-bottom: 1.3rem;
+  border: 1px gray solid;
+  padding: 1rem;
+  border-radius: 2rem;
 }
 
 /* Header */
@@ -73,6 +84,23 @@ main {
 
 /* Section MovieDB */
 
+.movieCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.3rem;
+  list-style: none;
+  background-color: beige;
+  text-align: center;
+  border-radius: 2rem;
+  padding: 1rem;
+  color: black;
+  width: 100%;
+  height: auto;
+  font-family: "InterTight";
+}
+
 .movieDbSearch {
   display: flex;
   flex-direction: column;
@@ -84,7 +112,7 @@ main {
   font-weight: 200;
   padding: 1rem;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: fit-content;
   gap: 1rem;
   text-align: center;
@@ -101,10 +129,10 @@ main {
   padding: 1rem;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 100%;
 }
 
-#filterContainer {
+#filterFunktion {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,29 +150,69 @@ textarea {
   text-align: center;
 }
 
-input[type="submit"] {
+input[type="button"] {
   background-color: beige;
-  color: rgb(108, 106, 106);
+  color: rgb(20, 20, 20);
   border-radius: 0.3rem;
-  padding: 0.1rem;
+  border-style: none;
+  padding: 0.2rem;
   text-align: center;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
+  font-family: "InterTight";
+  cursor: pointer;
 }
 
-#sortButtons {
+#sortierFunktion {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-#sortButtons label {
+.addMovieButton {
+  background-color: beige;
+  border-radius: 0.3rem;
+  border-style: none;
+  padding: 0.3rem;
+  text-align: center;
+  width: 100%;
+  font-size: 1rem;
+  color: rgb(36, 36, 36);
+  font-family: "InterTight";
+  cursor: pointer;
+}
+
+#filterFunktion label {
   font-family: "Walt";
   letter-spacing: 0.1rem;
+  font-size: 2rem;
+  border-bottom: 1px beige solid;
+}
+
+#sortierFunktion label {
+  font-family: "Walt";
+  letter-spacing: 0.1rem;
+  font-size: 1.5rem;
+  border-bottom: 1px beige solid;
+}
+
+#contributeLabel {
+  font-family: "Walt";
+  letter-spacing: 0.1rem;
+  font-size: 1.5rem;
+  border-bottom: 1px beige solid;
 }
 
 ::placeholder {
   font-family: "InterTight";
   font-weight: 200;
+}
+
+#movieList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 0.9rem;
+  justify-items: center;
+  gap: 1rem;
 }
 
 /* Footer */
@@ -169,7 +237,7 @@ footer {
 /* Background Image Responsive */
 
 #backgroundContainer {
-  background-image: url(../img/curtain.jpg);
+  background-image: url(../img/curtain_cropped.jpg);
   height: 100lvh;
   width: 100%;
   background-size: cover;
@@ -245,4 +313,59 @@ footer {
   100% {
     transform: translate(-15%, -20%);
   }
+}
+
+/* Modal für Add Movie */
+
+#addMovieContainer {
+  display: none;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+#extendArrow {
+  cursor: pointer;
+  font-size: 24px;
+  margin-bottom: 10px;
+  user-select: none;
+}
+
+#addMovieModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+#modalContent {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 8px;
+}
+
+#closeModal {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#closeModal:hover,
+#closeModal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }

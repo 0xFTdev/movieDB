@@ -16,7 +16,8 @@
     </header>
     <main>
         <section class="movieDbSearch">
-            <form id="filterContainer">
+            <form id="filterFunktion">
+                <label for="search">Search:</label>
                 <input type="text" name="search" id="search" oninput="filterMovies()" placeholder="Enter movie title">
                 <input type="text" id="director" oninput="filterMovies()" placeholder="Enter director">
                 <input type="text" id="duration" oninput="filterMovies()" placeholder="Enter duration">
@@ -24,17 +25,49 @@
                 <input type="text" id="year" oninput="filterMovies()" placeholder="Enter year">
                 <input type="text" id="rating" oninput="filterMovies()" placeholder="Enter rating">
             </form>
-            <form id="sortButtons">
+            <form id="sortierFunktion">
                 <label for="sort">Sort Results:</label>
                 <div class="sortButtonsFrame">
-                    <input type="submit" id="sort" value="Rating">
-                    <input type="submit" id="sort" value="Name">
-                    <input type="submit" id="sort" value="Year">
-                    <input type="submit" id="sort" value="Director">
+                    <input onclick="sortMovies('rating')" type="button" id="sort" value="Rating">
+                    <input onclick="sortMovies('name')" type="button" id="sort" value="Name">
+                    <input onclick="sortMovies('year')" type="button" id="sort" value="Year">
+                    <input onclick="sortMovies('director')" type="button" id="sort" value="Director">
                 </div>
             </form>
+            <label for="contribute" id="contributeLabel">Contribute:</label>
+            <button onclick="openModal()" class="addMovieButton" id="contribute">Add Movie</button>
         </section>
-        <section class="movieDbOutput"></section>
+        <section class="movieDbOutput">
+            <ul id="movieList"></ul>
+            <div id="notFoundMessage"></div>
+        </section>
+        <div id="addMovieModal">
+            <div id="modalContent">
+                <span id="closeModal" onclick="closeModal()">&times;</span>
+                <div id="addMovieContainer">
+                    <h2>Add a Movie</h2>
+                </div>
+
+                <label for="newTitle">Title:</label>
+                <input type="text" id="newTitle">
+
+                <label for="newYear">Year:</label>
+                <input type="text" id="newYear">
+
+                <label for="newDirector">Director:</label>
+                <input type="text" id="newDirector">
+
+                <label for="newDuration">Duration:</label>
+                <input type="text" id="newDuration">
+
+                <label for="newGenres">Genres (comma-separated):</label>
+                <input type="text" id="newGenres">
+
+                <label for="newRating">Rating:</label>
+                <input type="text" id="newRating">
+
+                <button onclick="addMovie()">Add Movie</button>
+            </div>
     </main>
     <footer>
         <p class="logoFooter">(searchFlix)</p>
