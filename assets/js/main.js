@@ -1162,7 +1162,6 @@ function openModal() {
   modal.style.visibility = "visible";
   setTimeout(function () {
     modal.style.opacity = "1";
-    modal.style.transform = "scale(1)";
   }, 50);
 }
 
@@ -1171,7 +1170,6 @@ function closeModal() {
   document.getElementById("addMovieModal").style.display = "none";
   let modal = document.getElementById("addMovieModal");
   modal.style.opacity = "0";
-  modal.style.transform = "scale(0.8)";
   modal.style.visibility = "hidden";
   setTimeout(function () {
     modal.style.display = "none";
