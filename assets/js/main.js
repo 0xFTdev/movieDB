@@ -992,7 +992,8 @@ function displayMovies(movieArray) {
       movieList.appendChild(listItem);
     });
   } else {
-    notFoundMessage.textContent = "No movies found. Try another input.";
+    notFoundMessage.textContent =
+      "Sorry! No movies found. Try another keyword.";
   }
 }
 

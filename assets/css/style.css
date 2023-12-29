@@ -53,9 +53,20 @@ body {
 }
 
 #notFoundMessage {
-  font-size: 4rem;
-  font-family: "Walt";
-  color: whitesmoke;
+  font-size: 2rem;
+  font-family: "InterTight";
+  color: white;
+  text-align: center;
+  z-index: 1;
+  padding: 1rem;
+  width: 80%;
+}
+
+.errorWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 
 span {
