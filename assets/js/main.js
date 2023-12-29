@@ -1158,11 +1158,24 @@ function addMovie() {
 // Öffnen des AddMovie PopUps
 function openModal() {
   document.getElementById("addMovieModal").style.display = "block";
+  let modal = document.getElementById("addMovieModal");
+  modal.style.visibility = "visible";
+  setTimeout(function () {
+    modal.style.opacity = "1";
+    modal.style.transform = "scale(1)";
+  }, 50);
 }
 
 // Schließen des AddMovie PopUps
 function closeModal() {
   document.getElementById("addMovieModal").style.display = "none";
+  let modal = document.getElementById("addMovieModal");
+  modal.style.opacity = "0";
+  modal.style.transform = "scale(0.8)";
+  modal.style.visibility = "hidden";
+  setTimeout(function () {
+    modal.style.display = "none";
+  }, 50);
 }
 
 // Aufrufen der Funktion zum Anzeigen von Filmen nach dem Laden der Seite

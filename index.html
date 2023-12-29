@@ -47,31 +47,33 @@
             <div id="notFoundMessage"></div>
         </section>
         <div id="addMovieModal">
-            <div id="modalContent">
-                <span id="closeModal" onclick="closeModal()">&#10006</span>
-                <div id="addMovieContainer">
-                    <h2>Add a Movie</h2>
+            <div id="modalContainer">
+                <div id="modalContent">
+                    <span id="closeModal" onclick="closeModal()">&#10006</span>
+                    <div id="addMovieContainer">
+                        <h2>Add a Movie</h2>
+                    </div>
+
+                    <label for="newTitle">Title:</label>
+                    <input type="text" id="newTitle">
+
+                    <label for="newYear">Year:</label>
+                    <input type="text" id="newYear">
+
+                    <label for="newDirector">Director:</label>
+                    <input type="text" id="newDirector">
+
+                    <label for="newDuration">Duration:</label>
+                    <input type="text" id="newDuration">
+
+                    <label for="newGenres">Genres (comma-separated):</label>
+                    <input type="text" id="newGenres">
+
+                    <label for="newRating">Rating:</label>
+                    <input type="text" id="newRating">
+
+                    <button onclick="addMovie()">Add Movie</button>
                 </div>
-
-                <label for="newTitle">Title:</label>
-                <input type="text" id="newTitle">
-
-                <label for="newYear">Year:</label>
-                <input type="text" id="newYear">
-
-                <label for="newDirector">Director:</label>
-                <input type="text" id="newDirector">
-
-                <label for="newDuration">Duration:</label>
-                <input type="text" id="newDuration">
-
-                <label for="newGenres">Genres (comma-separated):</label>
-                <input type="text" id="newGenres">
-
-                <label for="newRating">Rating:</label>
-                <input type="text" id="newRating">
-
-                <button onclick="addMovie()">Add Movie</button>
             </div>
     </main>
     <footer>
