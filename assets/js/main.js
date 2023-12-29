@@ -981,7 +981,7 @@ function displayMovies(movieArray) {
   }
 }
 
-// Filter Funktion
+// Genre Dropdown generieren
 
 function getUniqueGenres() {
   const genres = new Set();
@@ -1013,6 +1013,8 @@ function createGenreDropdownOptions() {
 
 createGenreDropdownOptions();
 
+// Filter Funktion
+
 function filterMovies() {
   const searchInput = document.getElementById("search").value.toLowerCase();
   const directorInput = document.getElementById("director").value.toLowerCase();
@@ -1036,7 +1038,7 @@ function filterMovies() {
   displayMovies(filteredMovies);
 }
 
-// Sortieren der Angezeigten Filme je nach Kriterium
+// Sortieren der Angezeigten Filme je nach Kriterium (Aufsteigend oder Absteigend)
 function sortMovies(criteria, buttonId) {
   let sortedMovies = [];
 
@@ -1089,6 +1091,7 @@ function updateSortButton(criteria, buttonId) {
 }
 
 // Funktion um einen neuen Film in die Datenbank hinzuzufügen
+
 function addMovie() {
   const newTitle = document.getElementById("newTitle").value;
   const newYear = document.getElementById("newYear").value;
