@@ -983,7 +983,6 @@ function displayMovies(movieArray) {
 
 // Filter Funktion
 
-// Function to get unique genres from the movies array
 function getUniqueGenres() {
   const genres = new Set();
   movies.forEach((movie) => {
@@ -992,22 +991,18 @@ function getUniqueGenres() {
   return Array.from(genres);
 }
 
-// Function to create the dropdown options
 function createGenreDropdownOptions() {
   console.log("Movies:", movies);
   const genreDropdown = document.getElementById("genre");
   const uniqueGenres = getUniqueGenres();
 
-  // Clear existing options
   genreDropdown.innerHTML = "";
 
-  // Create default option
   const defaultOption = document.createElement("option");
   defaultOption.value = "";
   defaultOption.text = "All Genres";
   genreDropdown.appendChild(defaultOption);
 
-  // Create options for each genre
   uniqueGenres.forEach((genre) => {
     const option = document.createElement("option");
     option.value = genre;
@@ -1016,7 +1011,6 @@ function createGenreDropdownOptions() {
   });
 }
 
-// Call the function to create dropdown options on page load
 createGenreDropdownOptions();
 
 function filterMovies() {
@@ -1046,7 +1040,6 @@ function filterMovies() {
 function sortMovies(criteria, buttonId) {
   let sortedMovies = [];
 
-  // Toggle sorting order
   sortAscending = !sortAscending;
 
   switch (criteria) {
@@ -1078,18 +1071,14 @@ function sortMovies(criteria, buttonId) {
       sortedMovies = movies;
   }
 
-  // Update button text and value with arrow
   updateSortButton(criteria, buttonId);
 
-  // Update the output in sorted order
   displayMovies(sortedMovies);
 }
 
-// Function to update the button text and value with arrow
 function updateSortButton(criteria, buttonId) {
   const button = document.getElementById(buttonId);
 
-  // Check if the button element is found before setting its value
   if (button) {
     const arrow = sortAscending ? "⥥" : "⥣";
     button.value =
