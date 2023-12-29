@@ -421,14 +421,14 @@ footer {
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
-  padding-top: 2rem;
+  padding-top: 3rem;
 }
 
 #modalContent {
   background-color: rgba(0, 0, 0, 0.9);
   margin: 5% auto;
   padding: 20px;
-  width: 20%;
+  width: 40%;
   border: 1px white solid;
   border-radius: 2rem;
   display: flex;
