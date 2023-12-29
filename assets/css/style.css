@@ -166,7 +166,8 @@ input[type="button"] {
 #sortierFunktion {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
+  width: 100%;
 }
 
 .addMovieButton {
@@ -182,6 +183,18 @@ input[type="button"] {
   color: rgb(36, 36, 36);
   font-family: "InterTight";
   cursor: pointer;
+}
+
+#genre {
+  background-color: beige;
+  border-radius: 0.3rem;
+  border-style: none;
+  padding: 0.3rem;
+  text-align: center;
+  width: 100%;
+  font-size: 1rem;
+  font-family: "InterTight";
+  font-weight: 200;
 }
 
 #filterFunktion label {
@@ -208,6 +221,7 @@ input[type="button"] {
 ::placeholder {
   font-family: "InterTight";
   font-weight: 200;
+  font-size: 1rem;
 }
 
 #movieList {
