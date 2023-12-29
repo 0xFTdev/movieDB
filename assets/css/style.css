@@ -39,6 +39,23 @@ body {
   color: beige;
   font-size: 3rem;
   z-index: 1;
+  transition: all 0.1s ease-in-out;
+}
+
+.headLine {
+  transition: all 0.1s ease-in-out;
+  z-index: 1;
+}
+
+.headLine:hover {
+  transform: scale(1.03);
+  z-index: 1;
+}
+
+#notFoundMessage {
+  font-size: 4rem;
+  font-family: "Walt";
+  color: whitesmoke;
 }
 
 span {
@@ -52,6 +69,11 @@ span {
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
   z-index: 1;
+  transition: all 0.1s ease-in-out;
+}
+
+.subTitle:hover {
+  transform: scale(1.03);
 }
 
 .cardContentHeadline {
@@ -100,6 +122,11 @@ main {
   width: 100%;
   height: auto;
   font-family: "InterTight";
+  transition: all 0.1s ease-in-out;
+}
+
+.movieCard:hover {
+  transform: scale(1.03);
 }
 
 .movieDbSearch {
@@ -162,6 +189,11 @@ input[type="button"] {
   font-family: "InterTight";
   font-weight: 200;
   cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+input[type="button"]:hover {
+  transform: scale(1.03);
 }
 
 #sortierFunktion {
@@ -184,6 +216,11 @@ input[type="button"] {
   color: rgb(36, 36, 36);
   font-family: "InterTight";
   cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.addMovieButton:hover {
+  transform: scale(1.03);
 }
 
 #genre {
@@ -256,12 +293,17 @@ footer {
   color: beige;
   font-family: "Showtime";
   z-index: 1;
+  transition: all 0.1s ease-in-out;
 }
 
 .logoFooter a {
   color: beige;
   font-family: "Showtime";
   z-index: 1;
+}
+
+.logoFooter:hover {
+  transform: scale(1.4);
 }
 
 /* Background Image Responsive */
