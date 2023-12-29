@@ -993,7 +993,7 @@ function displayMovies(movieArray) {
     });
   } else {
     notFoundMessage.textContent =
-      "Sorry! No movies found. Try another keyword.";
+      "Sorry! No matching movies found. Try another keyword.";
   }
 }
 
