@@ -83,6 +83,8 @@ let movies = [
   ],
 ];
 
+let sortAscending = true;
+
 // Funktion zum Anzeigen der Filme im DOM
 function displayMovies(movieArray) {
   const movieList = document.getElementById("movieList");
@@ -140,32 +142,60 @@ function filterMovies() {
 }
 
 // Sortieren der Angezeigten Filme je nach Kriterium
-function sortMovies(criteria) {
+function sortMovies(criteria, buttonId) {
   let sortedMovies = [];
+
+  // Toggle sorting order
+  sortAscending = !sortAscending;
 
   switch (criteria) {
     case "rating":
-      sortedMovies = [...movies].sort(
-        (a, b) => parseFloat(b[5]) - parseFloat(a[5])
+      sortedMovies = [...movies].sort((a, b) =>
+        sortAscending
+          ? parseFloat(b[5]) - parseFloat(a[5])
+          : parseFloat(a[5]) - parseFloat(b[5])
       );
       break;
     case "name":
-      sortedMovies = [...movies].sort((a, b) => a[0].localeCompare(b[0]));
+      sortedMovies = [...movies].sort((a, b) =>
+        sortAscending ? a[0].localeCompare(b[0]) : b[0].localeCompare(a[0])
+      );
       break;
     case "year":
-      sortedMovies = [...movies].sort(
-        (a, b) => parseInt(a[1]) - parseInt(b[1])
+      sortedMovies = [...movies].sort((a, b) =>
+        sortAscending
+          ? parseInt(a[1]) - parseInt(b[1])
+          : parseInt(b[1]) - parseInt(a[1])
       );
       break;
     case "director":
-      sortedMovies = [...movies].sort((a, b) => a[2].localeCompare(b[2]));
+      sortedMovies = [...movies].sort((a, b) =>
+        sortAscending ? a[2].localeCompare(b[2]) : b[2].localeCompare(a[2])
+      );
       break;
     default:
       sortedMovies = movies;
   }
 
-  // Update des Outputs in sortierter Weise
+  // Update button text and value with arrow
+  updateSortButton(criteria, buttonId);
+
+  // Update the output in sorted order
   displayMovies(sortedMovies);
+}
+
+// Function to update the button text and value with arrow
+function updateSortButton(criteria, buttonId) {
+  const button = document.getElementById(buttonId);
+
+  // Check if the button element is found before setting its value
+  if (button) {
+    const arrow = sortAscending ? "⥥" : "⥣";
+    button.value =
+      criteria.charAt(0).toUpperCase() + criteria.slice(1) + " " + arrow;
+  } else {
+    console.error(`Button with ID '${buttonId}' not found.`);
+  }
 }
 
 // Funktion um einen neuen Film in die Datenbank hinzuzufügen
